@@ -4,16 +4,10 @@
 
             <button type="button" class="btn btn-info">Cart {{ cart.length }}</button>
 
-            
+
             <div class="grid-container">
-                <ProductsChild v-for="product in products" 
-                :key="product.id"
-                :title="product.title" 
-                :image="product.image" 
-                :price="product.price"
-                :id="product.id"
-                @cartclicked="addTocart"
-                >
+                <ProductsChild v-for="product in products" :key="product.id" :title="product.title"
+                    :image="product.image" :price="product.price" :id="product.id" @cartclicked="addTocart">
                 </ProductsChild>
             </div>
         </div>
@@ -36,6 +30,7 @@ export default {
             cart: [],
         };
     },
+    
     mounted() {
         fetch('https://fakestoreapi.com/products/')
             .then(response => {
@@ -51,7 +46,7 @@ export default {
     },
 
     methods: {
-        addTocart(id){
+        addTocart(id) {
             this.cart.push(id);
         }
     }
@@ -59,14 +54,13 @@ export default {
 </script>
 
 <style>
-
 .grid-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-.product{
+.product {
     text-align: center;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 20px;
@@ -75,17 +69,16 @@ export default {
     justify-content: center;
 }
 
-.product img{
+.product img {
     max-width: 80px;
     width: 100%;
     height: auto;
 }
 
-.addToCart{
+.addToCart {
     border: none;
     margin-top: 10px;
     padding: 10px;
     width: 100%;
 }
-
 </style>

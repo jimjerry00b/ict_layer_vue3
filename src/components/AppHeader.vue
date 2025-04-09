@@ -24,7 +24,7 @@
 
         <div class="position-relative">
           <span class="text-primary bg-primary text-white px-2 py-1 rounded-pill position-absolute z-1 end-0">0</span>
-          <ion-icon class="btn" name="bag-handle-outline" style="font-size: 32px;" ></ion-icon>
+          <ion-icon class="btn" name="bag-handle-outline" style="font-size: 32px;"></ion-icon>
         </div>
         
       </div>
